@@ -1,0 +1,56 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: rgba(83, 137, 234, 0.2);
+}
+.calc{
+    justify-content: center;
+    display: grid;
+    align-content: center;
+    flex-direction: column;
+    min-height: 80vh;
+    grid-template-rows: minmax(100px,auto) repeat(5,80px);
+    grid-template-columns: repeat(4,80px);
+
+}
+.calc>button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background: #74c4ba;
+}
+.calc>button:hover{
+    background: azure;
+}
+.allclear{
+    grid-column:span 3 ;
+
+}
+.out{
+    grid-column: 1/-1;
+    background: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.out .prevoperand{
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+
+}
+.out .curroperand{
+    color: azure;
+font-size: 2.5rem;
+}
+
